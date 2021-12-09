@@ -88,7 +88,7 @@ function BetterTables.new(...)
 	local newTable = {}
 	if args[1] and typeof(args[1]) == "table" then 
 		if rawget(args[1], "_isBetterTable") then
-			newTable = deepCopy(args[1]:GetTable())
+			newTable = args[1]:DeepCopy()
 		else
 			newTable = deepCopy(args[1])
 		end
