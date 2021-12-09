@@ -337,7 +337,7 @@ return function()
 			t:Filter(function(value)
 				return value ~= 5
 			end)
-			expect(t[1])
+			expect(t[1]).to.equal(3)
 		end)
 		
 		it("should concatenate an array better table and an array regular table together", function()
