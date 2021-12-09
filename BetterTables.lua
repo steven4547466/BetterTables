@@ -310,9 +310,10 @@ function BetterTables.new(...)
 				if t:GetType() ~= TableTypes.Array then
 					error("Attempt to shuffle non-array table")
 				end
-				for i = 1, t:GetLength() do
+        local len = t:GetLength()
+				for i = 1, len do
 					local temp = t[i]
-					local newIndex = math.random(1, t:GetLength())
+					local newIndex = math.random(1, len)
 					t[i] = t[newIndex]
 					t[newIndex] = temp
 				end
